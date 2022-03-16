@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Navbar = ({ totalItem = 0 }) => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -37,5 +39,13 @@ const Navbar = ({ totalItem = 0 }) => {
     </nav>
   );
 };
+
+Navbar.defaultProps = {
+  punchasedItem: 0
+}
+
+Navbar.PropTypes = {
+  punchasedItem: PropTypes.number
+}
 
 export default Navbar;
